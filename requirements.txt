@@ -4,5 +4,6 @@ Flask
 matplotlib
 seaborn
 statsmodels.
+scikit-learn
 
 -e .
