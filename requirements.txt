@@ -3,5 +3,6 @@ pandas
 Flask
 matplotlib
 seaborn
+statsmodels.
 
 -e .
