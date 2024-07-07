@@ -3,7 +3,8 @@ pandas
 Flask
 matplotlib
 seaborn
-statsmodels.
+statsmodels
 scikit-learn
+logging
 
 -e .
