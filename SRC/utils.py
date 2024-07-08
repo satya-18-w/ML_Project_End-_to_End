@@ -20,3 +20,26 @@ def save_object(file_path,obj):
             
     except Exception as e:
         raise CustomException(e,sys)        
+    
+    
+    
+    
+def evaluate_model(X_train,Y_train,X_test,Y_test,models):
+    try:
+        report={}
+        for i in range(len(models)):
+            model=list(models.value())[i]
+            # Train Model
+            model.fit(X_train,Y_train)
+            
+            Y_test_pred=model.predict(X_test)
+            
+            
+            test_model_score=r2_score(Y_test,Y_test_pred)
+            report[list(models.key())[i]] = test_model_score
+            
+            
+        return report
+    except Exception as e:
+        logging.info("Exception occured during model training")
+        raise CustomException(e,sys)    
